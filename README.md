@@ -1,113 +1,26 @@
-# VIVO: Connect, Share, Discover
+# vivo
 
-[![Build](https://github.com/vivo-project/VIVO/workflows/Build/badge.svg)](https://github.com/vivo-project/VIVO/actions?query=workflow%3ABuild) [![Deploy](https://github.com/vivo-project/VIVO/workflows/Deploy/badge.svg)](https://github.com/vivo-project/VIVO/actions?query=workflow%3ADeploy) [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.2639714.svg)](https://doi.org/10.5281/zenodo.2639713)
+本仓库是「vivo」的安卓版本获取入口，附使用资料索引。
 
-VIVO is an open source semantic web tool for research discovery -- finding people and the research they do.
+## 安装文件资源（夸克网盘）
 
-VIVO supports editing, searching, browsing and visualizing research activity in order to discover people, programs, 
-facilities, funding, scholarly works and events. VIVO's search returns results faceted by type for rapid retrieval of 
-desired information across disciplines.
+> **vivo 安装文件资源（夸克网盘）**：[https://pan.quark.cn/s/a18d250e0f37](https://pan.quark.cn/s/a18d250e0f37)
 
-## Resources
+## 官方项目
 
-### VIVO Project web site
-[https://vivo.lyrasis.org/](https://vivo.lyrasis.org/)
+- 上游项目：[vivo-project/VIVO](https://github.com/vivo-project/VIVO)
 
-### VIVO Project Wiki
-https://wiki.lyrasis.org/display/VIVO/
+## 更多资料
 
-### Installation Instructions
+- [下载与安装教程](https://github.com/alipymanbu/Android/blob/master/%E5%AE%98%E7%BD%91%E7%89%88APP%E4%B8%8B%E8%BD%BD/vivo/%E4%B8%8B%E8%BD%BD%E4%B8%8E%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B.md)
+- [商城下单与优惠券使用](https://github.com/alipymanbu/Android/blob/master/%E5%AE%98%E7%BD%91%E7%89%88APP%E4%B8%8B%E8%BD%BD/vivo/%E5%95%86%E5%9F%8E%E4%B8%8B%E5%8D%95%E4%B8%8E%E4%BC%98%E6%83%A0%E5%88%B8%E4%BD%BF%E7%94%A8.md)
+- [国家补贴领取与使用规则](https://github.com/alipymanbu/Android/blob/master/%E5%AE%98%E7%BD%91%E7%89%88APP%E4%B8%8B%E8%BD%BD/vivo/%E5%9B%BD%E5%AE%B6%E8%A1%A5%E8%B4%B4%E9%A2%86%E5%8F%96%E4%B8%8E%E4%BD%BF%E7%94%A8%E8%A7%84%E5%88%99.md)
+- [常见问题与闪退排查](https://github.com/alipymanbu/Android/blob/master/%E5%AE%98%E7%BD%91%E7%89%88APP%E4%B8%8B%E8%BD%BD/vivo/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E4%B8%8E%E9%97%AA%E9%80%80%E6%8E%92%E6%9F%A5.md)
+- [真伪查询与维修价格查询](https://github.com/alipymanbu/Android/blob/master/%E5%AE%98%E7%BD%91%E7%89%88APP%E4%B8%8B%E8%BD%BD/vivo/%E7%9C%9F%E4%BC%AA%E6%9F%A5%E8%AF%A2%E4%B8%8E%E7%BB%B4%E4%BF%AE%E4%BB%B7%E6%A0%BC%E6%9F%A5%E8%AF%A2.md)
+- [积分获取与会员权益](https://github.com/alipymanbu/Android/blob/master/%E5%AE%98%E7%BD%91%E7%89%88APP%E4%B8%8B%E8%BD%BD/vivo/%E7%A7%AF%E5%88%86%E8%8E%B7%E5%8F%96%E4%B8%8E%E4%BC%9A%E5%91%98%E6%9D%83%E7%9B%8A.md)
+- [订单取消与退款到账](https://github.com/alipymanbu/Android/blob/master/%E5%AE%98%E7%BD%91%E7%89%88APP%E4%B8%8B%E8%BD%BD/vivo/%E8%AE%A2%E5%8D%95%E5%8F%96%E6%B6%88%E4%B8%8E%E9%80%80%E6%AC%BE%E5%88%B0%E8%B4%A6.md)
+- [全部软件目录](https://github.com/alipymanbu/Android/blob/master/%E5%85%A8%E9%83%A8%E8%BD%AF%E4%BB%B6%E7%9B%AE%E5%BD%95.md)
 
-Installation instructions for all releases can be found at this location on the wiki:  
-https://wiki.lyrasis.org/display/VIVODOC/All+Documentation
+---
 
-When you select the wiki pages for technical documentation for the release you would like to install at https://wiki.lyrasis.org/display/VIVODOC/All+Documentation, please open the Installing VIVO section and follow the instructions. 
-
-### Docker
-
-VIVO docker container is available at [vivoweb/vivo](https://hub.docker.com/repository/docker/vivoweb/vivo) with accompanying [vivoweb/vivo-solr](https://hub.docker.com/repository/docker/vivoweb/vivo-solr). These can be used independently or with docker-compose.
-
-### Docker Compose
-
-Docker Compose variable substitution:
-
-.env defaults
-```
-SOLR_RESET_CORE=false
-SOLR_VERBOSE=no
-
-SOLR_HOST_PORT=8983
-SOLR_CONTAINER_PORT=8983
-
-SOLR_CORES=./vivo-cores
-
-VIVO_RESET_HOME=false
-VIVO_VERBOSE=no
-
-VIVO_TDB_FILE_MODE=direct
-
-VIVO_HOST_VIVO_HOME=./vivo-home
-VIVO_CONTAINER_VIVO_HOME=/usr/local/vivo/home
-
-VIVO_HOST_PORT=8080
-VIVO_CONTAINER_PORT=8080
-```
-
-- `SOLR_RESET_CORE`: Convenience to reset VIVO Solr core when starting container. **Caution**, will require complete reindex.
-- `SOLR_VERBOSE`: Increase log verbosity.
-- `SOLR_HOST_PORT`: Host port binding for solr service port mapping.
-- `SOLR_CONTAINER_PORT`: Container port binding for solr service port mapping.
-- `SOLR_CORES`: Solr cores data directories on your host machine which will mount to volume in docker container. Set this environment variable to persist your Solr data on your host machine.
-
-- `VIVO_RESET_HOME`: Convenience to reset VIVO home when starting container. **Caution**, will delete local configuration, content, and configuration model.
-- `VIVO_VERBOSE`: Increase log verbosity.
-- `VIVO_TDB_FILE_MODE`: TDB file mode. See https://jena.apache.org/documentation/tdb/configuration.html#file-access-mode.
-- `VIVO_HOST_VIVO_HOME`: VIVO home directory on your host machine which will mount to volume in docker container. Set this environment variable to persist your VIVO data on your host machine.
-- `VIVO_CONTAINER_VIVO_HOME`: VIVO home directory within the container.
-- `VIVO_HOST_PORT`: Host port binding for VIVO Tomcat service port mapping.
-- `VIVO_CONTAINER_PORT`: Container port binding for VIVO Tomcat service port mapping.
-
-Before building VIVO, you will also need to clone (and switch to the same branch, if other than main) of [Vitro](https://github.com/vivo-project/Vitro). The Vitro project must be cloned to a sibling directory next to VIVO so that it can be found during the build. 
-
-Build and start VIVO.
-
-1. In VIVO (with Vitro cloned alongside it), run:
-```
-mvn clean package -s installer/docker-example-settings.xml
-docker-compose up
-```
-
-### Docker Image
-
-To build and run local Docker image.
-
-```
-docker build -t vivoweb/vivo:development .
-docker run -p 8080:8080 vivoweb/vivo:development
-```
-
-## Community
-There are several ways to contact and join the VIVO community. All of them are listed at [https://vivoweb.org/contact/](https://vivoweb.org/contact/).
-
-## Contributing Code
-If you would like to contribute code to the VIVO project, please read instructions at [this page](https://github.com/vivo-project/VIVO/wiki/Development-Processes#process-for-suggesting-contribution).  Contributors welcome!
-
-## Citing VIVO
-If you are using VIVO in your publications or projects, please cite the software paper in the Journal of Open Source Software:
-
-* Conlon et al., (2019). VIVO: a system for research discovery. Journal of Open Source Software, 4(39), 1182, https://doi.org/10.21105/joss.01182
-
-### BibTeX
-```tex
-@article{Conlon2019,
-  doi = {10.21105/joss.01182},
-  url = {https://doi.org/10.21105/joss.01182},
-  year = {2019},
-  publisher = {The Open Journal},
-  volume = {4},
-  number = {39},
-  pages = {1182},
-  author = {Michael Conlon and Andrew Woods and Graham Triggs and Ralph O'Flinn and Muhammad Javed and Jim Blake and Benjamin Gross and Qazi Asim Ijaz Ahmad and Sabih Ali and Martin Barber and Don Elsborg and Kitio Fofack and Christian Hauschke and Violeta Ilik and Huda Khan and Ted Lawless and Jacob Levernier and Brian Lowe and Jose Martin and Steve McKay and Simon Porter and Tatiana Walther and Marijane White and Stefan Wolff and Rebecca Younes},
-  title = {{VIVO}: a system for research discovery},
-  journal = {Journal of Open Source Software}
-}
+> 本仓库由上游项目 fork 而来，原始说明见[上游仓库](https://github.com/vivo-project/VIVO)。
